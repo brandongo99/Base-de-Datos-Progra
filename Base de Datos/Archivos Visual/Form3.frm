@@ -1,10 +1,10 @@
 VERSION 5.00
-Begin VB.Form Form6 
-   Caption         =   "Cliente"
-   ClientHeight    =   6030
+Begin VB.Form Form3 
+   Caption         =   "Autor"
+   ClientHeight    =   6360
    ClientLeft      =   120
    ClientTop       =   450
-   ClientWidth     =   6075
+   ClientWidth     =   5910
    BeginProperty Font 
       Name            =   "Magneto"
       Size            =   12
@@ -14,102 +14,111 @@ Begin VB.Form Form6
       Italic          =   0   'False
       Strikethrough   =   0   'False
    EndProperty
-   LinkTopic       =   "Form6"
-   ScaleHeight     =   9950.495
-   ScaleMode       =   0  'User
-   ScaleWidth      =   6075
+   LinkTopic       =   "Form3"
+   ScaleHeight     =   6360
+   ScaleWidth      =   5910
    StartUpPosition =   3  'Windows Default
+   Begin VB.CommandButton Command8 
+      DisabledPicture =   "Form3.frx":0000
+      DownPicture     =   "Form3.frx":5080
+      DragIcon        =   "Form3.frx":CDB2
+      Height          =   540
+      Left            =   360
+      Picture         =   "Form3.frx":14AE4
+      Style           =   1  'Graphical
+      TabIndex        =   15
+      Top             =   3480
+      Width           =   735
+   End
+   Begin VB.CommandButton Command9 
+      DisabledPicture =   "Form3.frx":1C816
+      DragIcon        =   "Form3.frx":24548
+      Height          =   615
+      Left            =   4920
+      Picture         =   "Form3.frx":2C27A
+      Style           =   1  'Graphical
+      TabIndex        =   14
+      Top             =   3480
+      Width           =   735
+   End
    Begin VB.CommandButton Command4 
       Caption         =   "Crear"
       Height          =   465
-      Index           =   1
-      Left            =   360
-      TabIndex        =   15
-      Top             =   5280
+      Left            =   240
+      TabIndex        =   13
+      Top             =   5160
       Width           =   975
    End
    Begin VB.CommandButton Command5 
       Caption         =   "Guardar"
       Height          =   495
-      Index           =   1
-      Left            =   1440
-      TabIndex        =   14
-      Top             =   5280
+      Left            =   1320
+      TabIndex        =   12
+      Top             =   5160
       Width           =   1335
    End
    Begin VB.CommandButton Command6 
       Caption         =   "Modificar"
       Height          =   495
-      Index           =   1
-      Left            =   2880
-      TabIndex        =   13
-      Top             =   5280
+      Left            =   2760
+      TabIndex        =   11
+      Top             =   5160
       Width           =   1455
    End
    Begin VB.CommandButton Command7 
       Caption         =   "Eliminar"
       Height          =   420
-      Index           =   1
-      Left            =   4560
-      TabIndex        =   12
-      Top             =   5280
+      Left            =   4440
+      TabIndex        =   10
+      Top             =   5160
       Width           =   1335
    End
    Begin VB.CommandButton Command3 
       Caption         =   "Inicio"
-      Height          =   420
-      Left            =   2040
-      TabIndex        =   11
-      Top             =   4560
+      Height          =   495
+      Left            =   2280
+      TabIndex        =   9
+      Top             =   4200
       Width           =   1335
    End
    Begin VB.CommandButton Command2 
       Caption         =   "Siguiente"
-      Height          =   420
-      Left            =   3240
-      TabIndex        =   10
-      Top             =   3840
+      Height          =   495
+      Left            =   3120
+      TabIndex        =   8
+      Top             =   3480
       Width           =   1695
    End
    Begin VB.CommandButton Command1 
       Caption         =   "Anterior"
-      Height          =   465
+      Height          =   495
       Left            =   1200
-      TabIndex        =   9
-      Top             =   3840
-      Width           =   1335
+      TabIndex        =   7
+      Top             =   3480
+      Width           =   1455
    End
    Begin VB.Data Data1 
-      Caption         =   "Cliente"
+      Caption         =   "Autor"
       Connect         =   "Access"
-      DatabaseName    =   "C:\Users\GODINEZ\Desktop\Base de datos Progra\Alquiler de discos.mdb"
+      DatabaseName    =   "C:\Users\GODINEZ\Desktop\Base-de-Datos-Progra\Base de Datos\Base de Datos\Alquiler de discos.mdb"
       DefaultCursorType=   0  'DefaultCursor
       DefaultType     =   2  'UseODBC
       Exclusive       =   0   'False
       Height          =   405
-      Left            =   1680
+      Left            =   1320
       Options         =   0
       ReadOnly        =   0   'False
       RecordsetType   =   1  'Dynaset
-      RecordSource    =   "Cliente"
-      Top             =   3240
-      Width           =   2895
-   End
-   Begin VB.TextBox Text4 
-      DataField       =   "Teléfono"
-      DataSource      =   "Data1"
-      Height          =   420
-      Left            =   2880
-      TabIndex        =   8
-      Top             =   2520
-      Width           =   2775
+      RecordSource    =   "Autor"
+      Top             =   2760
+      Width           =   3375
    End
    Begin VB.TextBox Text3 
-      DataField       =   "Dirección"
+      DataField       =   "Fecha_Nac"
       DataSource      =   "Data1"
       Height          =   420
-      Left            =   2880
-      TabIndex        =   7
+      Left            =   2760
+      TabIndex        =   6
       Top             =   2040
       Width           =   2775
    End
@@ -117,60 +126,51 @@ Begin VB.Form Form6
       DataField       =   "Nombre"
       DataSource      =   "Data1"
       Height          =   420
-      Left            =   2880
-      TabIndex        =   6
+      Left            =   2760
+      TabIndex        =   5
       Top             =   1560
       Width           =   2775
    End
    Begin VB.TextBox Text1 
-      DataField       =   "Num_Membresía"
+      DataField       =   "Código"
       DataSource      =   "Data1"
       Height          =   420
-      Left            =   2880
-      TabIndex        =   5
+      Left            =   2760
+      TabIndex        =   4
       Top             =   1080
       Width           =   2775
    End
-   Begin VB.Label Label5 
-      AutoSize        =   -1  'True
-      Caption         =   "Teléfono"
-      Height          =   300
-      Left            =   360
-      TabIndex        =   4
-      Top             =   2520
-      Width           =   1125
-   End
    Begin VB.Label Label4 
       AutoSize        =   -1  'True
-      Caption         =   "Dirección"
+      Caption         =   "Fecha_Nac"
       Height          =   300
-      Left            =   360
+      Left            =   600
       TabIndex        =   3
       Top             =   2040
-      Width           =   1275
+      Width           =   1500
    End
    Begin VB.Label Label3 
       AutoSize        =   -1  'True
       Caption         =   "Nombre"
       Height          =   300
-      Left            =   360
+      Left            =   600
       TabIndex        =   2
       Top             =   1560
       Width           =   1005
    End
    Begin VB.Label Label2 
       AutoSize        =   -1  'True
-      Caption         =   "Num_Mebresía"
+      Caption         =   "Código"
       Height          =   300
-      Left            =   360
+      Left            =   600
       TabIndex        =   1
       Top             =   1080
-      Width           =   1980
+      Width           =   840
    End
    Begin VB.Label Label1 
       AutoSize        =   -1  'True
       BackStyle       =   0  'Transparent
-      Caption         =   "Cliente"
+      Caption         =   "Autor"
       BeginProperty Font 
          Name            =   "Segoe Script"
          Size            =   15.75
@@ -181,26 +181,24 @@ Begin VB.Form Form6
          Strikethrough   =   0   'False
       EndProperty
       Height          =   495
-      Left            =   2520
+      Left            =   2400
       TabIndex        =   0
-      Top             =   360
-      Width           =   1200
+      Top             =   480
+      Width           =   975
    End
 End
-Attribute VB_Name = "Form6"
+Attribute VB_Name = "Form3"
 Attribute VB_GlobalNameSpace = False
 Attribute VB_Creatable = False
 Attribute VB_PredeclaredId = True
 Attribute VB_Exposed = False
 Private Sub Command1_Click()
 Me.Hide
-Form5.Show
-
+Form2.Show
 End Sub
-
 Private Sub Command2_Click()
 Me.Hide
-Form1.Show
+Form4.Show
 End Sub
 
 Private Sub Command3_Click()
@@ -208,25 +206,39 @@ Me.Hide
 Form7.Show
 End Sub
 
-Private Sub Command4_Click(Index As Integer)
+Private Sub Command4_Click()
 Data1.Recordset.AddNew
+
 End Sub
 
-Private Sub Command5_Click(Index As Integer)
+Private Sub Command5_Click()
 Data1.Recordset.Update
+
 End Sub
 
-Private Sub Command6_Click(Index As Integer)
+Private Sub Command6_Click()
 Data1.Recordset.Edit
 End Sub
 
-Private Sub Command7_Click(Index As Integer)
+Private Sub Command7_Click()
 Data1.Recordset.Delete
-End Sub
-
-Private Sub Data1_MouseDown(Button As Integer, Shift As Integer, X As Single, Y As Single)
 
 End Sub
+
+Private Sub Command8_Click()
+Data1.Recordset.MovePrevious
+If Data1.Recordset.BOF Then
+Data1.Recordset.MoveLast
+End If
+End Sub
+
+Private Sub Command9_Click()
+Data1.Recordset.MoveNext
+If Data1.Recordset.EOF Then
+Data1.Recordset.MoveFirst
+End If
+End Sub
+
 
 Private Sub Data1_Validate(Action As Integer, Save As Integer)
 If Data1.Recordset.BOF = True Then
@@ -236,3 +248,4 @@ If Data1.Recordset.EOF = True Then
 Data1.Recordset.MoveLast
 End If
 End Sub
+

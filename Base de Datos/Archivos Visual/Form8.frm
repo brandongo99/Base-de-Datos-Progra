@@ -120,7 +120,11 @@ Attribute VB_Creatable = False
 Attribute VB_PredeclaredId = True
 Attribute VB_Exposed = False
 Private Sub Command1_Click()
+If Text1 = "Brandon" And Text2 = "Hola" Then
 Me.Hide
 Form7.Show
+Else
+MsgBox ("Usuario o Contraseña Incorrecta")
+End If
 End Sub
 

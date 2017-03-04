@@ -1,10 +1,10 @@
 VERSION 5.00
-Begin VB.Form Form3 
-   Caption         =   "Autor"
-   ClientHeight    =   6360
+Begin VB.Form Form2 
+   Caption         =   "Película"
+   ClientHeight    =   5925
    ClientLeft      =   120
    ClientTop       =   450
-   ClientWidth     =   5910
+   ClientWidth     =   5895
    BeginProperty Font 
       Name            =   "Magneto"
       Size            =   12
@@ -14,140 +14,145 @@ Begin VB.Form Form3
       Italic          =   0   'False
       Strikethrough   =   0   'False
    EndProperty
-   LinkTopic       =   "Form3"
-   ScaleHeight     =   6360
-   ScaleWidth      =   5910
+   LinkTopic       =   "Form2"
+   ScaleHeight     =   5925
+   ScaleWidth      =   5895
    StartUpPosition =   3  'Windows Default
+   Begin VB.CommandButton Command8 
+      DisabledPicture =   "Form2.frx":0000
+      DownPicture     =   "Form2.frx":5080
+      DragIcon        =   "Form2.frx":CDB2
+      Height          =   540
+      Left            =   480
+      Picture         =   "Form2.frx":14AE4
+      Style           =   1  'Graphical
+      TabIndex        =   13
+      Top             =   3240
+      Width           =   735
+   End
+   Begin VB.CommandButton Command9 
+      DisabledPicture =   "Form2.frx":1C816
+      DragIcon        =   "Form2.frx":24548
+      Height          =   495
+      Left            =   4920
+      Picture         =   "Form2.frx":2C27A
+      Style           =   1  'Graphical
+      TabIndex        =   12
+      Top             =   3240
+      Width           =   735
+   End
    Begin VB.CommandButton Command4 
       Caption         =   "Crear"
       Height          =   465
       Left            =   240
-      TabIndex        =   13
-      Top             =   5160
+      TabIndex        =   11
+      Top             =   4920
       Width           =   975
    End
    Begin VB.CommandButton Command5 
       Caption         =   "Guardar"
       Height          =   495
       Left            =   1320
-      TabIndex        =   12
-      Top             =   5160
+      TabIndex        =   10
+      Top             =   4920
       Width           =   1335
    End
    Begin VB.CommandButton Command6 
       Caption         =   "Modificar"
       Height          =   495
       Left            =   2760
-      TabIndex        =   11
-      Top             =   5160
+      TabIndex        =   9
+      Top             =   4920
       Width           =   1455
    End
    Begin VB.CommandButton Command7 
       Caption         =   "Eliminar"
-      Height          =   420
-      Left            =   4440
-      TabIndex        =   10
-      Top             =   5160
+      Height          =   540
+      Left            =   4320
+      TabIndex        =   8
+      Top             =   4920
       Width           =   1335
    End
    Begin VB.CommandButton Command3 
       Caption         =   "Inicio"
-      Height          =   495
+      Height          =   420
       Left            =   2280
-      TabIndex        =   9
-      Top             =   4200
+      TabIndex        =   7
+      Top             =   4080
       Width           =   1335
    End
    Begin VB.CommandButton Command2 
       Caption         =   "Siguiente"
-      Height          =   495
+      Height          =   540
       Left            =   3120
-      TabIndex        =   8
-      Top             =   3480
+      TabIndex        =   6
+      Top             =   3240
       Width           =   1695
    End
    Begin VB.CommandButton Command1 
       Caption         =   "Anterior"
       Height          =   495
-      Left            =   1200
-      TabIndex        =   7
-      Top             =   3480
+      Left            =   1320
+      TabIndex        =   5
+      Top             =   3240
       Width           =   1455
    End
    Begin VB.Data Data1 
-      Caption         =   "Autor"
+      Caption         =   "Película"
       Connect         =   "Access"
-      DatabaseName    =   "C:\Users\GODINEZ\Desktop\Base de datos Progra\Alquiler de discos.mdb"
+      DatabaseName    =   "C:\Users\GODINEZ\Desktop\Base-de-Datos-Progra\Base de Datos\Base de Datos\Alquiler de discos.mdb"
       DefaultCursorType=   0  'DefaultCursor
       DefaultType     =   2  'UseODBC
       Exclusive       =   0   'False
       Height          =   405
-      Left            =   1320
+      Left            =   1200
       Options         =   0
       ReadOnly        =   0   'False
       RecordsetType   =   1  'Dynaset
-      RecordSource    =   "Autor"
-      Top             =   2760
-      Width           =   3375
-   End
-   Begin VB.TextBox Text3 
-      DataField       =   "Fecha_Nac"
-      DataSource      =   "Data1"
-      Height          =   420
-      Left            =   2760
-      TabIndex        =   6
-      Top             =   2040
-      Width           =   2775
+      RecordSource    =   "Película"
+      Top             =   2490
+      Width           =   3975
    End
    Begin VB.TextBox Text2 
-      DataField       =   "Nombre"
+      DataField       =   "Cod_Autor"
       DataSource      =   "Data1"
-      Height          =   420
-      Left            =   2760
-      TabIndex        =   5
-      Top             =   1560
-      Width           =   2775
+      Height          =   405
+      Left            =   2400
+      TabIndex        =   4
+      Top             =   1440
+      Width           =   3015
    End
    Begin VB.TextBox Text1 
-      DataField       =   "Código"
+      DataField       =   "Cod_Tipo"
       DataSource      =   "Data1"
-      Height          =   420
-      Left            =   2760
-      TabIndex        =   4
-      Top             =   1080
-      Width           =   2775
-   End
-   Begin VB.Label Label4 
-      AutoSize        =   -1  'True
-      Caption         =   "Fecha_Nac"
-      Height          =   300
-      Left            =   600
+      Height          =   375
+      Left            =   2400
       TabIndex        =   3
-      Top             =   2040
-      Width           =   1500
+      Top             =   960
+      Width           =   3015
    End
    Begin VB.Label Label3 
       AutoSize        =   -1  'True
-      Caption         =   "Nombre"
+      Caption         =   "Cod_Actor"
       Height          =   300
-      Left            =   600
+      Left            =   480
       TabIndex        =   2
-      Top             =   1560
-      Width           =   1005
+      Top             =   1440
+      Width           =   1425
    End
    Begin VB.Label Label2 
       AutoSize        =   -1  'True
-      Caption         =   "Código"
+      Caption         =   "Cod_Tipo"
       Height          =   300
-      Left            =   600
+      Left            =   480
       TabIndex        =   1
-      Top             =   1080
-      Width           =   840
+      Top             =   960
+      Width           =   1185
    End
    Begin VB.Label Label1 
       AutoSize        =   -1  'True
       BackStyle       =   0  'Transparent
-      Caption         =   "Autor"
+      Caption         =   "Película"
       BeginProperty Font 
          Name            =   "Segoe Script"
          Size            =   15.75
@@ -160,22 +165,23 @@ Begin VB.Form Form3
       Height          =   495
       Left            =   2400
       TabIndex        =   0
-      Top             =   480
-      Width           =   975
+      Top             =   120
+      Width           =   1425
    End
 End
-Attribute VB_Name = "Form3"
+Attribute VB_Name = "Form2"
 Attribute VB_GlobalNameSpace = False
 Attribute VB_Creatable = False
 Attribute VB_PredeclaredId = True
 Attribute VB_Exposed = False
 Private Sub Command1_Click()
 Me.Hide
-Form2.Show
+Form1.Show
 End Sub
+
 Private Sub Command2_Click()
 Me.Hide
-Form4.Show
+Form3.Show
 End Sub
 
 Private Sub Command3_Click()
@@ -199,7 +205,20 @@ End Sub
 
 Private Sub Command7_Click()
 Data1.Recordset.Delete
+End Sub
 
+Private Sub Command8_Click()
+Data1.Recordset.MovePrevious
+If Data1.Recordset.BOF Then
+Data1.Recordset.MoveLast
+End If
+End Sub
+
+Private Sub Command9_Click()
+Data1.Recordset.MoveNext
+If Data1.Recordset.EOF Then
+Data1.Recordset.MoveFirst
+End If
 End Sub
 
 Private Sub Data1_Validate(Action As Integer, Save As Integer)

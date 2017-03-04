@@ -18,6 +18,29 @@ Begin VB.Form Form4
    ScaleHeight     =   5925
    ScaleWidth      =   6015
    StartUpPosition =   3  'Windows Default
+   Begin VB.CommandButton Command8 
+      DisabledPicture =   "Form4.frx":0000
+      DownPicture     =   "Form4.frx":5080
+      DragIcon        =   "Form4.frx":CDB2
+      Height          =   540
+      Left            =   240
+      Picture         =   "Form4.frx":14AE4
+      Style           =   1  'Graphical
+      TabIndex        =   15
+      Top             =   3240
+      Width           =   735
+   End
+   Begin VB.CommandButton Command9 
+      DisabledPicture =   "Form4.frx":1C816
+      DragIcon        =   "Form4.frx":24548
+      Height          =   615
+      Left            =   4920
+      Picture         =   "Form4.frx":2C27A
+      Style           =   1  'Graphical
+      TabIndex        =   14
+      Top             =   3240
+      Width           =   735
+   End
    Begin VB.CommandButton Command4 
       Caption         =   "Crear"
       Height          =   465
@@ -86,7 +109,7 @@ Begin VB.Form Form4
    Begin VB.Data Data1 
       Caption         =   "Disco"
       Connect         =   "Access"
-      DatabaseName    =   "C:\Users\GODINEZ\Desktop\Base de datos Progra\Alquiler de discos.mdb"
+      DatabaseName    =   "C:\Users\GODINEZ\Desktop\Base-de-Datos-Progra\Base de Datos\Base de Datos\Alquiler de discos.mdb"
       DefaultCursorType=   0  'DefaultCursor
       DefaultType     =   2  'UseODBC
       Exclusive       =   0   'False
@@ -201,6 +224,21 @@ End Sub
 Private Sub Command7_Click()
 Data1.Recordset.Delete
 End Sub
+
+Private Sub Command8_Click()
+Data1.Recordset.MovePrevious
+If Data1.Recordset.BOF Then
+Data1.Recordset.MoveLast
+End If
+End Sub
+
+Private Sub Command9_Click()
+Data1.Recordset.MoveNext
+If Data1.Recordset.EOF Then
+Data1.Recordset.MoveFirst
+End If
+End Sub
+
 
 Private Sub Data1_Validate(Action As Integer, Save As Integer)
 If Data1.Recordset.BOF = True Then

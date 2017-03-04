@@ -5,6 +5,7 @@ Begin VB.Form Form1
    ClientLeft      =   120
    ClientTop       =   450
    ClientWidth     =   5985
+   DrawStyle       =   5  'Transparent
    BeginProperty Font 
       Name            =   "Magneto"
       Size            =   12
@@ -18,6 +19,29 @@ Begin VB.Form Form1
    ScaleHeight     =   6390
    ScaleWidth      =   5985
    StartUpPosition =   3  'Windows Default
+   Begin VB.CommandButton Command9 
+      DisabledPicture =   "Form1.frx":0000
+      DragIcon        =   "Form1.frx":7D32
+      Height          =   615
+      Left            =   5040
+      Picture         =   "Form1.frx":FA64
+      Style           =   1  'Graphical
+      TabIndex        =   13
+      Top             =   2640
+      Width           =   735
+   End
+   Begin VB.CommandButton Command8 
+      DisabledPicture =   "Form1.frx":17796
+      DownPicture     =   "Form1.frx":1C816
+      DragIcon        =   "Form1.frx":24548
+      Height          =   540
+      Left            =   480
+      Picture         =   "Form1.frx":2C27A
+      Style           =   1  'Graphical
+      TabIndex        =   12
+      Top             =   2640
+      Width           =   735
+   End
    Begin VB.CommandButton Command7 
       Caption         =   "Eliminar"
       Height          =   420
@@ -95,7 +119,7 @@ Begin VB.Form Form1
    Begin VB.Data Data1 
       Caption         =   "Tipo de Película"
       Connect         =   "Access"
-      DatabaseName    =   "C:\Users\GODINEZ\Desktop\Base de datos Progra\Alquiler de discos.mdb"
+      DatabaseName    =   "C:\Users\GODINEZ\Desktop\Base-de-Datos-Progra\Base de Datos\Base de Datos\Alquiler de discos.mdb"
       DefaultCursorType=   0  'DefaultCursor
       DefaultType     =   2  'UseODBC
       Exclusive       =   0   'False
@@ -181,11 +205,17 @@ Private Sub Command7_Click()
 Data1.Recordset.Delete
 End Sub
 
-Private Sub Data1_Validate(Action As Integer, Save As Integer)
-If Data1.Recordset.BOF = True Then
-Data1.Recordset.MoveFirst
-End If
-If Data1.Recordset.EOF = True Then
+Private Sub Command8_Click()
+Data1.Recordset.MovePrevious
+If Data1.Recordset.BOF Then
 Data1.Recordset.MoveLast
 End If
 End Sub
+
+Private Sub Command9_Click()
+Data1.Recordset.MoveNext
+If Data1.Recordset.EOF Then
+Data1.Recordset.MoveFirst
+End If
+End Sub
+
